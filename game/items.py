@@ -3,6 +3,7 @@ import game.combat as combat
 import game.context as context
 import game.superclasses as superclasses
 import random
+from game.display import announce
 
 class Item(superclasses.ActionResolver, context.Context):
     def __init__(self, name, value):
@@ -85,3 +86,25 @@ class Flintlock(Item):
         self.skill = "guns"
         self.verb = "shoot"
         self.verb2 = "shoots"
+
+class TreasureChest(Item):
+    def __init__(self):
+        super().__init__("Golden Treasure Chest", "A magnificent golden treasure chest filled with ancient riches.")
+        self.value = 1000  
+        self.weight = 10   
+
+    def inspect(self):
+        announce("The treasure chest is ornately decorated with intricate carvings and gemstones.")
+        announce("It seems to be filled with gold coins, jewels, and ancient artifacts.")
+
+
+class AncientBlunderbuss(Item):
+    def __init__(self):
+        super().__init__("Ancient Blunderbuss", "A powerful and ancient firearm with immense destructive power.")
+        self.value = 2000
+        self.damage = (50, 150)  # Minimum and maximum damage range
+        self.firearm = True
+        self.charges = 1
+        self.skill = "guns"
+        self.verb = "blast"
+        self.verb2 = "blasts"

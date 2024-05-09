@@ -62,6 +62,9 @@ class CrewMate(Context, superclasses.CombatCritter):
     def get_health (self):
         return self.health
 
+    def heal_to_full(self):
+        self.health = self.max_health
+
     def receive_medicine (self, num):
         '''Makes the pirate no longer sick (but doesn't remove sickness event)'''
         if (num > 0):
