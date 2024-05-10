@@ -212,7 +212,7 @@ class VolcanoTower (location.SubLocation):
                     announce("Nothing happens. The code seems incorrect.")
             else:
                 announce("Invalid input. Please enter a two-digit number.")
-
+#whatever
 
 class RuinsMonster(combat.Monster):
     def __init__(self,name):
