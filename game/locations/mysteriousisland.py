@@ -76,10 +76,10 @@ class Cave(location.SubLocation):
         self.events.append(Earthquake()) 
 
     def enter(self):
-        announce("You arrive at the cave. if you type solve and enter you get something")
+        announce("You arrive at the cave. Type solve to solve the riddle")
 
     def solve_riddle(self):
-        announce("You see an ancient inscription on the cave wall:")
+        announce("You see an ancient inscription on the cave wall")
         announce("I'm light as a feather, yet the strongest man can't hold me for much more than a minute. What am I?")
         answer = input("Your answer: ").lower()
         if answer == "breath":
